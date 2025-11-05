@@ -1,0 +1,51 @@
+import Spline from '@splinetool/react-spline';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+
+export default function Hero() {
+  return (
+    <section className="relative pt-28 overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute -top-24 -left-24 h-80 w-80 rounded-full bg-fuchsia-600/20 blur-3xl" />
+        <div className="absolute -bottom-24 -right-24 h-80 w-80 rounded-full bg-purple-600/20 blur-3xl" />
+      </div>
+
+      <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="order-2 lg:order-1">
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/80">
+            <CheckCircle size={14} className="text-fuchsia-400" />
+            Websites that convert. Brands that stand out.
+          </span>
+          <h1 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white">
+            24Digital — Web experiences in bold magenta & purple
+          </h1>
+          <p className="mt-4 text-white/70 text-base sm:text-lg max-w-xl">
+            We craft high-performance websites for ambitious brands. From strategy and design to development and launch — everything tailored to drive real business results.
+          </p>
+          <div className="mt-8 flex flex-col sm:flex-row gap-3">
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center gap-2 rounded-md bg-gradient-to-r from-fuchsia-500 to-purple-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-fuchsia-500/30 hover:opacity-95 transition"
+            >
+              Start Your Project
+              <ArrowRight size={18} />
+            </a>
+            <a
+              href="#work"
+              className="inline-flex items-center justify-center rounded-md border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white hover:bg-white/10 transition"
+            >
+              See Our Work
+            </a>
+          </div>
+        </div>
+
+        <div className="order-1 lg:order-2 relative h-[420px] sm:h-[520px] lg:h-[640px] rounded-2xl overflow-hidden border border-white/10 bg-black/40">
+          <Spline
+            scene="https://prod.spline.design/wwTRdG1D9CkNs368/scene.splinecode"
+            style={{ width: '100%', height: '100%' }}
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+        </div>
+      </div>
+    </section>
+  );
+}
